@@ -564,6 +564,8 @@ var Html5DashJS = /*#__PURE__*/function () {
         });
       });
       this.qualityLevels_.on('change', function (event) {
+        _this2.mediaPlayer_ = player.dash.mediaPlayer; // make sure to have the current mediaPlayer instance at hand
+
         var enabledQualities = _this2.qualityLevels_.levels_.filter(function (q) {
           return q.enabled;
         });

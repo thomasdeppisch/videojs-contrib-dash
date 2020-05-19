@@ -299,6 +299,7 @@ class Html5DashJS {
             });
 
             this.qualityLevels_.on('change', (event) => {
+                this.mediaPlayer_ = player.dash.mediaPlayer; // make sure to have the current mediaPlayer instance at hand
                 let enabledQualities = this.qualityLevels_.levels_.filter((q) => q.enabled);
                 let autoSwitchingEnabled = this.mediaPlayer_.getSettings().streaming.abr.autoSwitchBitrate;
 
